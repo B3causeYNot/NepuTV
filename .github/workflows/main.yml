@@ -34,13 +34,11 @@ jobs:
           cache-disabled: true
 
       # ── 4. Set up Android SDK ────────────────────────────────────────────────
-      - name: Set up Android SDK
+      - name: name: Set up Android SDK
         uses: android-actions/setup-android@v3
-        with:
-          packages: |
-            platform-tools
-            platforms;android-34
-            build-tools;34.0.0
+
+      - name: Install Android SDK packages
+        run: sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
       # ── 5. Accept Android licenses ───────────────────────────────────────────
       - name: Accept Android licenses
