@@ -34,7 +34,7 @@ jobs:
           cache-disabled: true
 
       # ── 4. Set up Android SDK ────────────────────────────────────────────────
-      - name: name: Set up Android SDK
+      - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
       - name: Install Android SDK packages
